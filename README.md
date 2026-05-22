@@ -1,59 +1,363 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🚀 LeadFlow CRM – AI Powered Customer Relationship Management System
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## 🏁 Project Objective
 
-## About Laravel
+The objective of this project is to develop a complete and intelligent Customer Relationship Management system that helps businesses manage leads, customers, deals, tasks, follow-ups, support tickets, reminders, notifications, and email communication from one centralized platform.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+This CRM also includes AI-powered features such as AI follow-up message generation, AI ticket reply generation, and AI customer summary generation to improve productivity, customer handling, and sales/support efficiency.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+---
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 📌 Problem Statement
 
-## Learning Laravel
+Many small and medium businesses manage leads, customers, follow-ups, and support issues manually using spreadsheets, phone notes, or separate tools. This creates several problems:
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+- Leads are not tracked properly.
+- Follow-ups are missed.
+- Customer communication becomes unorganized.
+- Support tickets are difficult to manage.
+- Sales and support teams do not have clear role-based access.
+- Managers cannot easily monitor team performance.
+- Reminder and overdue alerts are often handled manually.
+- Customer history is not available in one place.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+This CRM solves these problems by providing a centralized, role-based, responsive, and AI-powered system for managing the complete customer lifecycle.
 
-## Laravel Sponsors
+---
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## ✨ Key Features
 
-### Premium Partners
+### 👥 User & Role Management
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+The system supports multiple user roles with secure access control:
 
-## Contributing
+- Admin
+- Sales Executive
+- Support Agent
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Each role has different permissions based on their responsibilities.
 
-## Code of Conduct
+---
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### 📋 Lead Management
 
-## Security Vulnerabilities
+Sales teams can manage leads efficiently with complete lead details, status tracking, follow-up history, and AI-generated follow-up messages.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Main features include:
 
-## License
+- Add, edit, view, and delete leads
+- Assign leads to sales executives
+- Track lead status
+- Manage follow-up dates
+- Generate AI follow-up messages
+- Convert leads into customers or deals
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+---
+
+### 👤 Customer Management
+
+The CRM stores complete customer information in one place. This helps sales and support teams understand customer history before taking action.
+
+Main features include:
+
+- Customer profile management
+- Company details
+- Contact details
+- Related leads
+- Related tickets
+- Related deals
+- AI customer summary generation
+
+---
+
+### 💼 Deal Management
+
+The deal module helps track business opportunities and sales progress.
+
+Main features include:
+
+- Create and manage deals
+- Track deal value
+- Update deal stages
+- Mark deals as won or lost
+- Monitor revenue
+- View sales pipeline
+
+---
+
+### ✅ Task & Follow-up Management
+
+The system helps teams manage daily work and follow-ups without missing deadlines.
+
+Main features include:
+
+- Create tasks
+- Assign tasks to users
+- Set due dates
+- Track pending and completed tasks
+- Follow-up reminders
+- Overdue alerts
+- Notification system integration
+
+---
+
+### 🎫 Support Ticket Management
+
+Support agents can manage customer issues through a ticketing system.
+
+Main features include:
+
+- Create and manage support tickets
+- Assign tickets to support agents
+- Track ticket status
+- Add replies
+- View ticket conversation history
+- Generate AI ticket replies
+- Send ticket reply emails to customers
+
+---
+
+### 🔔 Notification System
+
+The CRM includes a complete notification center for important updates.
+
+Main features include:
+
+- Task reminders
+- Overdue alerts
+- Lead assignment notifications
+- Ticket assignment notifications
+- Mark as read
+- Mark all as read
+- Delete notifications
+- Open related notification only when required
+
+---
+
+### 📧 Email Integration
+
+Email communication is integrated into the CRM for important customer updates.
+
+Main features include:
+
+- Send ticket reply emails
+- Email notification support
+- Professional email templates
+- Customer issue updates through email
+
+---
+
+## 🤖 AI Features
+
+### 1️⃣ AI Follow-up Message Generator
+
+This feature generates professional follow-up messages using lead details.
+
+It helps sales executives quickly prepare polite and personalized messages for customers.
+
+---
+
+### 2️⃣ AI Ticket Reply Generator
+
+This feature generates helpful and professional support replies based on ticket details.
+
+It helps support agents reply faster while maintaining a polite and reassuring tone.
+
+---
+
+### 3️⃣ AI Customer Summary
+
+This feature generates a short customer summary based on available customer information, tickets, leads, and interactions.
+
+It helps users quickly understand customer history before making a call, sending an email, or handling a support request.
+
+---
+
+## 📊 Dashboard & Insights
+
+The CRM dashboard provides a quick overview of important business activities.
+
+Dashboard insights include:
+
+- Total leads
+- Total customers
+- Total deals
+- Won deals
+- Pending tasks
+- Overdue tasks
+- Open tickets
+- Resolved tickets
+- Recent activities
+- Notifications summary
+
+---
+
+## 🔐 Role-Based Access Control
+
+The system uses role-based access to ensure users can only access the modules assigned to them.
+
+### Admin
+
+Admin can manage the complete CRM system including users, leads, customers, deals, tickets, reports, notifications, and system settings.
+
+### Sales Executive
+
+Sales executives can manage assigned leads, follow-ups, deals, and customer communication.
+
+### Support Agent
+
+Support agents can manage assigned tickets, generate AI replies, and respond to customer issues.
+
+---
+
+## 📱 Responsive UI
+
+The complete CRM interface is designed to be responsive and user-friendly.
+
+The system works smoothly on:
+
+- Desktop
+- Laptop
+- Tablet
+- Mobile devices
+
+The UI is clean, modern, professional, and easy to navigate.
+
+---
+
+## 🛠️ Tools & Technologies Used
+
+- Laravel – Backend framework
+- PHP – Server-side programming
+- MySQL – Database
+- Blade – Laravel templating engine
+- Tailwind CSS – Responsive UI design
+- JavaScript – UI interactions
+- Font Awesome – Icons
+- Gemini AI API – AI response generation
+- Laravel Mail – Email sending
+- Laravel Scheduler – Reminders and overdue alerts
+
+---
+
+## 🧩 Main Modules
+
+### Admin Module
+
+- Dashboard
+- User management
+- Lead management
+- Customer management
+- Deal management
+- Task management
+- Ticket management
+- Notifications
+- Reports
+
+### Sales Module
+
+- Assigned leads
+- Follow-ups
+- Deals
+- Customer communication
+- AI follow-up message generation
+
+### Support Module
+
+- Assigned tickets
+- Ticket replies
+- AI ticket reply generation
+- Customer issue tracking
+- Ticket email updates
+
+---
+
+## 🚀 Key KPIs
+
+The CRM tracks important business KPIs such as:
+
+- Total Leads
+- Converted Leads
+- Total Customers
+- Open Tickets
+- Resolved Tickets
+- Pending Tasks
+- Overdue Tasks
+- Total Deals
+- Won Deals
+- Lost Deals
+- Revenue from Won Deals
+
+---
+
+## 📈 Reports
+
+The reports module helps the admin analyze CRM performance.
+
+Reports include:
+
+- Lead reports
+- Ticket reports
+- Deal reports
+- Follow-up reports
+- Task reports
+- User performance reports
+
+Reports help managers understand business progress and team productivity.
+
+---
+
+## 🎯 Key Learnings
+
+This project helped in understanding and implementing:
+
+- Complete CRM system development
+- Laravel MVC architecture
+- Role-based authentication and authorization
+- Database relationship handling
+- AI API integration
+- Email integration
+- Notification system
+- Task reminder automation
+- Responsive UI design
+- Real-world business workflow development
+- Clean and maintainable code structure
+
+---
+
+## 📌 Project Type
+
+Full Stack Web Development | CRM System | AI Integrated Web Application | Laravel Project
+
+---
+
+## 📷 Project Preview
+
+### Dashboard
+
+![Dashboard Preview](https://github.com/khansadiq5/ai-leadflow-crm/blob/main/public/screenshots/Dashboard.png)
+
+### Lead Management
+
+![Lead Preview](https://github.com/khansadiq5/ai-leadflow-crm/blob/main/public/screenshots/Lead%20Management.png)
+
+### Customer Management
+
+![Customer Preview](https://github.com/khansadiq5/ai-leadflow-crm/blob/main/public/screenshots/Customer%20Management.png)
+
+### Ticket Management
+
+![Ticket Preview](https://github.com/khansadiq5/ai-leadflow-crm/blob/main/public/screenshots/Tickets.png)
+
+### AI Features
+
+![AI Features Preview](https://github.com/khansadiq5/ai-leadflow-crm/blob/main/public/screenshots/AI%20Feature.png)
+
+---
+
+## ⚙️ Installation Guide
+
+Clone the repository:
+
+```bash
+https://github.com/khansadiq5/ai-leadflow-crm.git
