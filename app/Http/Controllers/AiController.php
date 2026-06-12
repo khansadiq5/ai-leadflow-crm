@@ -181,7 +181,9 @@ Generate only the summary.
             return back()->with('error', 'Lead email address is missing.');
         }
 
-        Mail::to($lead->email)->queue(new LeadFollowUpMail($lead, $request->message));
+        Mail::to($lead->email)->send(
+            new LeadFollowUpMail($lead, $request->message)
+        );
 
         return back()->with('success', 'Follow-up email queued successfully for ' . $lead->email);
     }

@@ -25,8 +25,7 @@ class SendOverdueTaskAlerts extends Command
             ->get();
 
         foreach ($tasks as $task) {
-            SendOverdueTaskAlertJob::dispatch($task->id)
-                ->onQueue('notifications');
+            (new \App\Jobs\SendOverdueTaskAlertJob($task->id))->handle();
         }
 
         $this->info($tasks->count() . ' overdue task alert jobs dispatched.');

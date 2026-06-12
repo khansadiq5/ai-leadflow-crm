@@ -19,6 +19,7 @@ use App\Http\Controllers\AiController;
 
 use Illuminate\Support\Facades\DB;
 
+
 Route::get('/', function () {
     return redirect()->route('login');
 });
@@ -163,5 +164,11 @@ Route::get('/check-jobs', function () {
     ]);
 });
 
+
+Route::get('/clear-jobs', function () {
+    DB::table('jobs')->truncate();
+
+    return 'Jobs cleared successfully';
+});
 
 
