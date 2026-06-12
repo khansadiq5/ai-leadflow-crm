@@ -17,8 +17,6 @@ use App\Http\Controllers\ReportController;
 use App\Http\Controllers\SettingController;
 use App\Http\Controllers\AiController;
 
-use Database\Seeders\ProductionUsersSeeder;
-
 Route::get('/', function () {
     return redirect()->route('login');
 });
@@ -156,12 +154,3 @@ Route::middleware(['auth'])->group(function () {
 
 
 
-Route::get('/seed-users', function () {
-    (new ProductionUsersSeeder())->run();
-
-    return 'Users Seeded Successfully';
-});
-
-Route::get('/test-route', function () {
-    return 'TEST OK';
-});
