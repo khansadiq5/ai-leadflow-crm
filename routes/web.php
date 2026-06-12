@@ -17,6 +17,8 @@ use App\Http\Controllers\ReportController;
 use App\Http\Controllers\SettingController;
 use App\Http\Controllers\AiController;
 
+use Illuminate\Support\Facades\DB;
+
 Route::get('/', function () {
     return redirect()->route('login');
 });
@@ -150,6 +152,15 @@ Route::middleware(['auth'])->group(function () {
 
     //Logout    
     Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+});
+
+
+
+Route::get('/check-jobs', function () {
+    return response()->json([
+        'jobs' => DB::table('jobs')->count(),
+        'failed_jobs' => DB::table('failed_jobs')->count(),
+    ]);
 });
 
 
