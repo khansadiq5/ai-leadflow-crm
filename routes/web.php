@@ -58,6 +58,7 @@ Route::middleware(['auth'])->group(function () {
     //Task
     Route::patch('/tasks/{task}/complete', [TaskController::class, 'complete'])
     ->name('tasks.complete');
+    
     Route::patch('/tasks/{task}/status', [TaskController::class, 'updateStatus'])
     ->name('tasks.status.update');
 
@@ -77,7 +78,7 @@ Route::middleware(['auth'])->group(function () {
     //Notification
      Route::get('/notifications', [NotificationController::class, 'index'])
         ->name('notifications.index');
-        
+
     Route::patch('/notifications/{notification}/mark-read', [NotificationController::class, 'markRead'])
         ->name('notifications.markRead');
 
@@ -101,14 +102,14 @@ Route::middleware(['auth'])->group(function () {
         
     //Customer Support 
     Route::get('/support/customers', [SupportCustomerController::class, 'index'])
-    ->name('support.customers.index');
+        ->name('support.customers.index'); 
 
     Route::get('/support/customers/{customer}', [SupportCustomerController::class, 'show'])
         ->name('support.customers.show');    
 
     //Report
     Route::get('/reports', [ReportController::class, 'index'])
-    ->name('reports.index');
+        ->name('reports.index');
 
     //PDF downloads
     Route::get('/reports/export/pdf', [ReportController::class, 'exportPdf'])
