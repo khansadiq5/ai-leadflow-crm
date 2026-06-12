@@ -161,3 +161,7 @@ Route::get('/seed-users', function () {
 
     return 'Users Seeded Successfully';
 });
+
+Route::get('/test-route', function () {
+    return 'TEST OK';
+});
