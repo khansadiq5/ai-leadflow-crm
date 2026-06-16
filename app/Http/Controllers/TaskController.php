@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Models\Task;
 use App\Models\User;
@@ -243,6 +244,11 @@ class TaskController extends Controller
             $completedAt = null;
         }
 
+        // Agar due_date change ho gayi, to overdue_notified_at aur reminder_sent_at reset karo
+        // Taaki nayi due_date ke liye alert/reminder fir se fire ho sake
+        $dueDateChanged = $task->due_date->toDateTimeString() !== 
+            \Carbon\Carbon::parse($request->due_date)->toDateTimeString();
+
         $task->update([
             'assigned_to' => $request->assigned_to,
             'lead_id' => $request->lead_id,
@@ -254,6 +260,8 @@ class TaskController extends Controller
             'priority' => $request->priority,
             'status' => $request->status,
             'completed_at' => $completedAt,
+            'overdue_notified_at' => $dueDateChanged ? null : $task->overdue_notified_at,
+            'reminder_sent_at'    => $dueDateChanged ? null : $task->reminder_sent_at,
         ]);
 
         ActivityService::log([

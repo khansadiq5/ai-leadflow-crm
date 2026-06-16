@@ -4,8 +4,9 @@
         ->count();
 
     $latestNotifications = \App\Models\Notification::where('user_id', auth()->id())
+        ->orderBy('is_read', 'asc')
         ->latest()
-        ->take(3)
+        ->take(5)
         ->get();
 @endphp
 

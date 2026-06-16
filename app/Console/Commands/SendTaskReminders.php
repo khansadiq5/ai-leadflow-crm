@@ -30,7 +30,8 @@ class SendTaskReminders extends Command
             ->get();
 
         foreach ($tasks as $task) {
-            (new \App\Jobs\SendTaskReminderJob($task->id))->handle();
+            // (new \App\Jobs\SendTaskReminderJob($task->id))->handle();
+            SendTaskReminderJob::dispatchSync($task->id);
         }
 
         $this->info($tasks->count() . ' task reminder jobs dispatched.');

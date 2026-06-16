@@ -79,14 +79,14 @@ Route::middleware(['auth'])->group(function () {
      Route::get('/notifications', [NotificationController::class, 'index'])
         ->name('notifications.index');
 
+    Route::patch('/notifications/mark-all-read', [NotificationController::class, 'markAllRead'])
+        ->name('notifications.markAllRead');
+
     Route::patch('/notifications/{notification}/mark-read', [NotificationController::class, 'markRead'])
         ->name('notifications.markRead');
 
     Route::get('/notifications/{notification}/open', [NotificationController::class, 'open'])
         ->name('notifications.open');
-
-    Route::patch('/notifications/mark-all-read', [NotificationController::class, 'markAllRead'])
-        ->name('notifications.markAllRead');
 
     Route::delete('/notifications/{notification}', [NotificationController::class, 'destroy'])
         ->name('notifications.destroy');
